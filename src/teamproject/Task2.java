@@ -4,18 +4,30 @@
  * and open the template in the editor.
  */
 package teamproject;
-
-/**
- *
- * @author Proud To Be Muslims
- */
+import java.util.Scanner;
 public class Task2 {
 
-    /**
-     * @param args the command line arguments
-     */
+    
+      public static void displayVertical(String sent)
+    {
+        for(int i=0;i<sent.length();i++)
+        {
+            if(sent.charAt(i)!=' ')
+            {
+                System.out.println(sent.charAt(i));
+            }
+        }
+        
+    }
     public static void main(String[] args) {
         // TODO code application logic here
+            Scanner obj=new Scanner(System.in);
+        String sentence;
+        System.out.println(" please enter a string ");
+        sentence=obj.nextLine();
+        System.out.println(" your string presented vertically is ");
+        displayVertical(sentence);
+    
     }
     
 }

@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author Proud To Be Muslims
  */
-public class TeamProject {
+public class Task1 {
 
     public static int wordCounter(String s) {
         int wordCount = 1;
@@ -53,20 +53,56 @@ public class TeamProject {
         return punccounter;
     }
 
+    public static boolean subString(String s, String sub) {
+        boolean flag = false;
+        String sub1 = sub.toLowerCase();
+        String s1 = s.toLowerCase();
+        for (int i = 0; i < s1.length(); i++) {
+            if (sub1.charAt(0) == s1.charAt(i)) {
+                int k = i;
+                for (int j = 0; j < sub1.length(); j++) {
+                    if (sub1.charAt(j) == s1.charAt(k)) {
+
+                        flag = true;
+                    } else {
+                        flag = false;
+                        break;
+                    }
+                    k++;
+                }
+                if (flag == true) {
+                    return true;
+                }
+            }
+        }
+        return flag;
+    }
+
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         // TODO code application logic here
         Scanner obj = new Scanner(System.in);
-        System.out.println("Enter String :");
+        System.out.print("Enter String :");
         String str = obj.nextLine();
+        if (str.length() >= 16) {
+            obj.nextLine();
+        }
+        System.out.print("Enter SubString :");
+        String sub = obj.nextLine();
         int number = wordCounter(str);
         System.out.println("Number of words  = " + number);
         int counter = vowelcounter(str);
         System.out.println("Number of vowels =" + counter);
         int puncoutere = intpuncCount(str);
         System.out.println("Number of punctuations =" + puncoutere);
+        if (subString(str, sub)) {
+            System.out.println(sub + " is the part of this String");
+        } else {
+            System.out.println(sub + " is not the part of this String");
+        }
+
     }
 
 }

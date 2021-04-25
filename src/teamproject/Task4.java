@@ -7,9 +7,6 @@ package teamproject;
 
 import java.util.Scanner;
 import javax.swing.JOptionPane;
-import static teamproject.Task3.removeInteger;
-import static teamproject.Task3.ridMultipleBlank;
-import static teamproject.Task3.stringEncryption;
 
 /**
  *
@@ -45,7 +42,7 @@ public class Task4{
             }
             if (flag == true) {
                 //System.out.print(s.charAt(i) + " ");
-                norepeater = norepeater + s.charAt(i)+",";
+                norepeater = norepeater + s.charAt(i)+" ";
             }
         }
         return norepeater;
@@ -74,7 +71,7 @@ public class Task4{
         String sentence;
         int input = -1;
         do {
-            String choose = JOptionPane.showInputDialog("Features" + "\n" + "Press 1.To check the Words that appear once in string Method " + "\n" + "Press 2.To use removeInteger Method " + "\n" + "Press 3.To use stringEncryption Method" + "\n" + "Press 0.To Exit");
+            String choose = JOptionPane.showInputDialog("Features" + "\n" + "Press 1.To check the Words that appear once in string Method " + "\n" + "Press 2.To Check a word that reapts how many times Method " + "\n" + "Press 3.To reverse a String Method" + "\n" + "Press 0.To Exit");
             input = Integer.parseInt(choose);
             switch (input) {
                 case 1:
@@ -85,11 +82,17 @@ public class Task4{
                     break;
                 case 2:
                     sentence = JOptionPane.showInputDialog("Enter a string: ");
+<<<<<<< HEAD
                     String remove;
                     String y=JOptionPane.showInputDialog("Enter a string: ");
                     char x=Parsechar(y);
                     remove = repeater(sentence,y);
                     JOptionPane.showMessageDialog(null, "Output:" + "\n" + remove);
+=======
+                    String remove=JOptionPane.showInputDialog("Enter a Word: ");
+                    int cout = removeInteger(sentence,remove);                  
+                    JOptionPane.showMessageDialog(null, "The Word "+remove+" appers :" + cout+ " Times");                         
+>>>>>>> 06aca88e1ef41d777afc906a39426bde2390bd0e
                     break;
                 case 3:
                     sentence = JOptionPane.showInputDialog("Enter a string: ");

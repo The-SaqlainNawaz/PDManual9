@@ -8,7 +8,6 @@ package teamproject;
 import java.util.Random;
 import java.util.Scanner;
 import javax.swing.JOptionPane;
-
 public class Task3 {
 
     public static String removeInteger(String s) {

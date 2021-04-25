@@ -8,7 +8,6 @@ package teamproject;
 import java.util.Random;
 import java.util.Scanner;
 import javax.swing.JOptionPane;
-import static teamproject.NewMain.stringEncryption;
 
 public class Task3 {
 

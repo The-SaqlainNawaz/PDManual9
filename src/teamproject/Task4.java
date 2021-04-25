@@ -16,6 +16,14 @@ import static teamproject.Task3.stringEncryption;
  * @author Proud To Be Muslims
  */
 public class Task4{ 
+
+    private static char Parsechar(String y) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private static String repeater(String sentence, String y) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     private String str=new String();
     
@@ -42,6 +50,21 @@ public class Task4{
         }
         return norepeater;
     }
+    
+     public static int repeater(String s, char y) {
+        int count = 0;
+        int size = s.length();
+        for (int i = 0; i < size; i++) {
+           if(s.charAt(i)==y)
+           {
+               count++;
+           }
+
+        }
+
+        return count;
+
+    }
     /**
      * @param args the command line arguments
      */
@@ -63,7 +86,9 @@ public class Task4{
                 case 2:
                     sentence = JOptionPane.showInputDialog("Enter a string: ");
                     String remove;
-                    remove = removeInteger(sentence);
+                    String y=JOptionPane.showInputDialog("Enter a string: ");
+                    char x=Parsechar(y);
+                    remove = repeater(sentence,y);
                     JOptionPane.showMessageDialog(null, "Output:" + "\n" + remove);
                     break;
                 case 3:

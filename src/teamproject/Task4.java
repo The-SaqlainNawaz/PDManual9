@@ -82,17 +82,13 @@ public class Task4{
                     break;
                 case 2:
                     sentence = JOptionPane.showInputDialog("Enter a string: ");
-<<<<<<< HEAD
+
                     String remove;
                     String y=JOptionPane.showInputDialog("Enter a string: ");
                     char x=Parsechar(y);
                     remove = repeater(sentence,y);
                     JOptionPane.showMessageDialog(null, "Output:" + "\n" + remove);
-=======
-                    String remove=JOptionPane.showInputDialog("Enter a Word: ");
-                    int cout = removeInteger(sentence,remove);                  
-                    JOptionPane.showMessageDialog(null, "The Word "+remove+" appers :" + cout+ " Times");                         
->>>>>>> 06aca88e1ef41d777afc906a39426bde2390bd0e
+
                     break;
                 case 3:
                     sentence = JOptionPane.showInputDialog("Enter a string: ");
